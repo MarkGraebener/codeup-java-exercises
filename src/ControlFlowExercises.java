@@ -101,5 +101,24 @@ public class ControlFlowExercises
 
 
         // need help with the tables????????????????
+        Scanner scanner = new Scanner(System.in);
+        String choice = "y";
+        while (choice.equalsIgnoreCase("y")) {
+            System.out.println("Enter an Integer: ");
+            int integerNext = scanner.nextInt(6);
+            System.out.println("Number" + "  " + "Squared" + "  " + "Cubed");
+            System.out.println("======" + "  " + "=======" + "  " + "=====");
+            for (int i = 1; i <= integerNext; i++) {
+                int numberSquared = (int) Math.pow(i, 2);
+                int numberCubed = (int) Math.pow(i, 3);
+                String message = "\n" + "|  " + i + "   |  " + numberSquared + "     |  " + numberCubed;
+                System.out.print(message);
+            }
+            System.out.print("\nContinue? (y/n): ");
+            choice = scanner.next();
+            System.out.println();
+
+        }
     }
+
 }
