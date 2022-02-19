@@ -1,8 +1,8 @@
 public class HelloWorld {
     public static void main(String[] args) {
 
-        long myFavoriteNumber = 22/7L; // why no decimal in long? why no work in float?
-        String myString = "Matthew";
+//        long myFavoriteNumber = 22/7L; // why no decimal in long? why no work in float?
+//        String myString = "Matthew";
 
 //        int x = 5;
 //        System.out.println(x++); // executes after logging
@@ -31,5 +31,8 @@ public class HelloWorld {
 //        int y = 2;
 //        x = x / y;
 //        y = y - x; ???
+
     }
+
+
 }
