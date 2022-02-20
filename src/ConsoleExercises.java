@@ -44,7 +44,7 @@ public class ConsoleExercises
         int width = scanner.nextInt();
         int perimeter = (length * 2) + (width * 2);
         int area = length * width;
-        System.out.println("The perimeter is: " + perimeter + "The area is: " + area);// cant get new line to work
+        System.out.println("The perimeter is: " + perimeter + "\nThe area is: " + area);
 
     }
 }
