@@ -24,6 +24,7 @@ public class ControlFlowExercises
 //            System.out.println("Your count is: " + count);
 //            count-= 5;
 //        } while (count >= 5);
+
         //do while square 2 till 1,000,000
         // why do you have to use double with math.pow??????????
 //        double count = 2;
