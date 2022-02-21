@@ -8,15 +8,9 @@ public class MethodsExercises
     {
         return x - y;
     }
-    public static int multiply(int x,int y)
+    public static void multiply(int x,int y)
     {
-        int n;
-        for(int i = 0; i <= y; i++)
-        {
-            n = x + x;
 
-        }
-        return n;
     }
     public static double divide(double x,double y)
     {
@@ -31,7 +25,7 @@ public class MethodsExercises
     {
         System.out.println(add(2,3));
         System.out.println(sub(2,3));
-        System.out.println(multiply(2,3));
+        System.out.println(multiply(2,8));
         System.out.println(divide(2,3));
         System.out.println(modulo(48,3));
     }
