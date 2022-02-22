@@ -27,8 +27,7 @@ public class GameFromStack
             String input;
 
             System.out.println("The room is dark and gloomy, it reeks of dead corpses and rotten food,");
-            System.out
-                    .println("You look behind you, the skeleton you recently killed and the damaged map are on the floor");
+            System.out.println("You look behind you, the skeleton you recently killed and the damaged map are on the floor");
             System.out.println("the only choice no is to move forward");
             System.out.println("avail commands: forward, heal");
             input = UI.nextLine();

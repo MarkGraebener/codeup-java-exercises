@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MethodsExercises
 {
-//    public static int add(int x,int y)
+    //    public static int add(int x,int y)
 //    {
 //        return x + y;
 //    }
@@ -11,20 +11,26 @@ public class MethodsExercises
 //        return x - y;
 //    }
 //    // what is going on??????
-//    public static void multiply(int x,int y)
-//    {
-//        int count = y;
-//        do {
-//            count--;
-//            multiply(x+x,y);
-//
-////            if (count == 0) {
-////                System.out.println(x);
-////
+    public static int multiply(int x, int y) {
+//        int multiplyer = y;
+        for (int i = y; i >= 0; i--) {
+            x += x;
+//            multiply(x, multiplyer);
+        }
+        return x;
+    }
+//        do
+//        {
+////            if (count > 0)
+////            {
+//            x += x;
+//            multiply(x, multiplyer);
+//            i--;
 ////            }
-//        }while(count >= y);
-//        System.out.println(count);
-//
+//        }
+//        while (i >= 0);
+//        return x;
+
 //    }
 //    public static double divide(double x,double y)
 //    {
@@ -50,26 +56,25 @@ public class MethodsExercises
 //            getInteger();
 //        }
 //    }
-    public static void calcFactorial()
-    {
-        Scanner scanner = new Scanner(System.in);
+//    public static void calcFactorial()
+//    {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter number from 1 - 10: ");
+//        int userInput = scanner.nextInt(); // input as int
+//        int i,fact=1; // what is this declaration????????/
+//        for(i=1;i<=userInput;i++){
+//            fact=fact*i;
+//        }
+//        System.out.println(userInput+"! = "+fact);
+//    }
 
-        System.out.print("Enter number from 1 - 10: ");
-        int userInput = scanner.nextInt(); // input as int
-        int i,fact=1; // what is this declaration????????/
-        for(i=1;i<=userInput;i++){
-            fact=fact*i;
-        }
-        System.out.println(userInput+"! = "+fact);
-    }
-
-    public static void main(String[] args)
-    {
-        calcFactorial();
+    public static void main(String[] args) {
+//        calcFactorial();
 //        getInteger();
 //        System.out.println(add(2,3));
 //        System.out.println(sub(2,3));
-//        System.out.println(multiply(2,8));
+        System.out.println(multiply(2, 8));
 //        System.out.println(divide(2,3));
 //        System.out.println(modulo(48,3));
     }
