@@ -11,27 +11,28 @@ public class MethodsExercises
 //        return x - y;
 //    }
 //    // what is going on??????
-    public static int multiply(int x, int y) {
-//        int multiplyer = y;
-        for (int i = y; i >= 0; i--) {
-            x += x;
-//            multiply(x, multiplyer);
+    static int answer = 0;
+    public static int multiply(int x, int y)
+    {
+        answer += x;
+        if(y == 1)
+        {
+            return answer;
         }
-        return x;
+//        System.out.println("x = " + x);
+//        System.out.println("answer = " + answer);
+//        System.out.println("multiplyer = " + y);
+        return multiply(x, y-1);
     }
-//        do
+    //        if(y == 1)
 //        {
-////            if (count > 0)
-////            {
-//            x += x;
-//            multiply(x, multiplyer);
-//            i--;
-////            }
+//            return x;
 //        }
-//        while (i >= 0);
-//        return x;
-
-//    }
+////        System.out.println(x + multiply(x,y-1));
+//        System.out.println("x = " + x);
+//        System.out.println("multiply(x,y-1) = " + multiply(x, y - 1));
+//        return x + multiply(x, y-1);
+//
 //    public static double divide(double x,double y)
 //    {
 //        return x / y;
@@ -69,12 +70,13 @@ public class MethodsExercises
 //        System.out.println(userInput+"! = "+fact);
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 //        calcFactorial();
 //        getInteger();
 //        System.out.println(add(2,3));
 //        System.out.println(sub(2,3));
-        System.out.println(multiply(2, 8));
+        System.out.println(multiply(11, 6));
 //        System.out.println(divide(2,3));
 //        System.out.println(modulo(48,3));
     }
