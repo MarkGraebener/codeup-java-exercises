@@ -45,8 +45,8 @@ public class Input
 //        return getInt(min,max);
 //    }
 
-public static String getDouble(double min, double max)
-{
+    public static String getDouble(double min, double max)
+    {
     Scanner scanner = new Scanner(System.in);
     System.out.println("enter num between min & max value: ");
     double userInput = scanner.nextDouble();
@@ -64,6 +64,6 @@ public static String getDouble(double min, double max)
 //        System.out.println("getString() = " + getString());
 //        System.out.println("yesNo() = " + yesNo());
 //        System.out.println("getInt(5,10) = " + getInt(5, 10));
-        System.out.println("getDouble(1.01,2.01) = " + getDouble(1.01, 2.01));
+//        System.out.println("getDouble(1.01,2.01) = " + getDouble(1.01, 2.01));
     }
 }
