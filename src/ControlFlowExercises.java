@@ -2,8 +2,13 @@ import java.util.Scanner;
 
 public class ControlFlowExercises
 {
+
+
     public static void main(String[] args)
     {
+        int x = 5;
+        String y = "y";
+        System.out.println(x + y);
 //while loop from 5 - 15
 //        int i = 5;
 //        while (i <= 15) {
