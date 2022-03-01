@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Input
 {
 
-//    public static String getString()
-//    {
-//        Scanner scanner = new Scanner(System.in);
+    public static String getString()
+    {
+        Scanner scanner = new Scanner(System.in);
 //        System.out.println("enter a string: ");
-//        return scanner.nextLine();
-//    }
+        return scanner.nextLine();
+    }
 
 //    public static boolean yesNo()
 //    {
@@ -44,19 +44,24 @@ public class Input
 //        System.out.println("Try again!");
 //        return getInt(min,max);
 //    }
+    public static int getInt()
+    {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    };
 
-    public static String getDouble(double min, double max)
-    {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("enter num between min & max value: ");
-    double userInput = scanner.nextDouble();
-    if(userInput >= min & userInput <= max)
-    {
-        return "You got it";
-    }
-    System.out.println("Try again!");
-    return getDouble(min,max);
-}
+//    public static String getDouble(double min, double max)
+//    {
+//    Scanner scanner = new Scanner(System.in);
+//    System.out.println("enter num between min & max value: ");
+//    double userInput = scanner.nextDouble();
+//    if(userInput >= min & userInput <= max)
+//    {
+//        return "You got it";
+//    }
+//    System.out.println("Try again!");
+//    return getDouble(min,max);
+//}
 
 
     public static void main(String[] args)
