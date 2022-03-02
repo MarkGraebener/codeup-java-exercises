@@ -26,6 +26,7 @@ public class MoviesApplication
         else if(choice == 1)
         {
             displayMovies(movieList, "all");
+            System.out.println();
             app();
         }
         else if(choice == 2)
@@ -36,21 +37,25 @@ public class MoviesApplication
 //                if(Objects.equals(movieList[i].getCategory(), "animated"))
 //                    System.out.println( movieList[i].getName() + " --- "+ movieList[i].getCategory());
 //            }
+            System.out.println();
             app();
         }
         else if(choice == 3)
         {
             displayMovies(movieList,"drama");
+            System.out.println();
             app();
         }
         else if(choice == 4)
         {
             displayMovies(movieList,"horror");
+            System.out.println();
             app();
         }
         else if(choice == 5)
         {
             displayMovies(movieList,"scifi");
+            System.out.println();
             app();
         }
         else if(choice == 6)
@@ -67,7 +72,7 @@ public class MoviesApplication
 
             System.out.println("Movie added!");
             displayMovies(newMovieList,"all");
-
+            System.out.println();
             app() ;
         }
         else
@@ -110,10 +115,7 @@ public class MoviesApplication
         {
             newArr[i] = movieList[i];
         }
-
-
         newArr[n] = newMovie;
-
         return newArr;
     }
     public static void main(String[] args)
