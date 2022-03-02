@@ -10,94 +10,112 @@ import java.util.Scanner;
 
 public class MoviesApplication
 {
-public static void app()
-{
-    System.out.println("What would you like to do:\n");
-//
-    System.out.println(" 0 - exit\n 1 - view all movies\n 2 - view movies in the animated category\n 3 - view movies in the drama category\n 4 - view movies in the horror category\n 5 - view movies in the scifi category\n 6 - Add a new movie");
+    public static void app()
+    {
+        System.out.println("What would you like to do:\n");
+    //
+        System.out.println(" 0 - exit\n 1 - view all movies\n 2 - view movies in the animated category\n 3 - view movies in the drama category\n 4 - view movies in the horror category\n 5 - view movies in the scifi category\n 6 - Add a new movie");
 
-    Movie[] movieList = MoviesArray.findAll();
-//        System.out.println("movieList = " + Arrays.toString(movieList));
-//        System.out.println(movieList[0].getName());
+        Movie[] movieList = MoviesArray.findAll();
 
-//        System.out.println(Input.getInt());
-    int choice = Input.getInt();
-    if(choice == 0)
-    {
-        System.exit(0);
-    }
-    else if(choice == 1)
-    {
-        for(int i = 0; i <= movieList.length - 1; i++)
+        int choice = Input.getInt();
+        if(choice == 0)
         {
-            System.out.println("Movie = " + movieList[i].getName() + "  Category = "+ movieList[i].getCategory());
+            System.exit(0);
         }
-        app();
-    }
-    else if(choice == 2)
-    {
-        for(int i = 0; i <= movieList.length - 1; i++)
+        else if(choice == 1)
         {
-            if(Objects.equals(movieList[i].getCategory(), "animated"))
-                System.out.println( movieList[i].getName() + " --- "+ movieList[i].getCategory());
+            displayMovies(movieList, "all");
+            app();
         }
-        app();
-    }
-    else if(choice == 3)
-    {
-        for(int i = 0; i <= movieList.length - 1; i++)
+        else if(choice == 2)
         {
-            if(Objects.equals(movieList[i].getCategory(), "drama"))
-                System.out.println( movieList[i].getName() + " --- "+ movieList[i].getCategory());
+            displayMovies(movieList,"animated");
+//            for(int i = 0; i <= movieList.length - 1; i++)
+//            {
+//                if(Objects.equals(movieList[i].getCategory(), "animated"))
+//                    System.out.println( movieList[i].getName() + " --- "+ movieList[i].getCategory());
+//            }
+            app();
         }
-        app();
-    }
-    else if(choice == 4)
-    {
-        for (int i = 0; i <= movieList.length - 1; i++)
+        else if(choice == 3)
         {
-            if (Objects.equals(movieList[i].getCategory(), "horror"))
-                System.out.println(movieList[i].getName() + " --- " + movieList[i].getCategory());
+            displayMovies(movieList,"drama");
+            app();
         }
-        app();
-    }
-    else if(choice == 5)
-    {
-        for (int i = 0; i <= movieList.length - 1; i++) {
-            if (Objects.equals(movieList[i].getCategory(), "scifi"))
-                System.out.println(movieList[i].getName() + " --- " + movieList[i].getCategory());
+        else if(choice == 4)
+        {
+            displayMovies(movieList,"horror");
+            app();
         }
-        app();
-    }
-    else if(choice == 6)
-    {
-        System.out.println("Name a movie: ");
-        String newMovieName = Input.getString();
-        System.out.println("What is the category: ");
-        String newMovieCat = Input.getString();
-        System.out.println(newMovieCat + " " + newMovieName);
+        else if(choice == 5)
+        {
+            displayMovies(movieList,"scifi");
+            app();
+        }
+        else if(choice == 6)
+        {
+            System.out.println("Name a movie: ");
+            String newMovieName = Input.getString();
+            System.out.println("What is the category: ");
+            String newMovieCat = Input.getString();
+            System.out.println(newMovieCat + " " + newMovieName);
 
-        movieList.add(new Movie(newMovieName, newMovieCat));
-//        addMovie(movieList, new Movie(newMovieName,newMovieCat));
+            Movie newMovie = new Movie(newMovieName, newMovieCat);
 
-        System.out.println("Movie added!");
-        app();
+            Movie[] newMovieList = addMovie(movieList.length, movieList,newMovie);
+
+            System.out.println("Movie added!");
+            displayMovies(newMovieList,"all");
+
+            app() ;
+        }
+        else
+        {
+            System.out.println("not a choice");
+        }
     }
-    else
+
+    public static void displayMovies(Movie[] movieList,String cat)
     {
-        System.out.println("not a choice");
+        if (Objects.equals(cat, "all"))
+        {
+            for (int i = 0; i <= movieList.length - 1; i++)
+            {
+                System.out.println("Movie = " + movieList[i].getName() + "  Category = " + movieList[i].getCategory());
+            }
+        }
+        else
+        {
+            for (int i = 0; i <= movieList.length - 1; i++)
+            {
+                if (Objects.equals(movieList[i].getCategory(), cat))
+                {
+                    System.out.println(movieList[i].getName() + " --- " + movieList[i].getCategory());
+                }
+            }
+        }
     }
-}
-//public static Movie[] addMovie(Movie[] movies, Movie newMovie)
-//{
-//    Movie[] temArr = Arrays.copyOf(movies, movies.length + 1);
-//    temArr[temArr.length -1] = newMovie;
-//    for(Movie movie: temArr)
-//    {
-//        System.out.println(movie.getName() + "  " + movie.getCategory());
-//    }
-//    return temArr;
-//}
+    // Function to add new movie in arr
+    public static Movie[] addMovie( int n, Movie[] movieList, Movie newMovie)
+    {
+        // create a new array of size n+1
+        Movie[] newArr = new Movie[ n + 1];
+
+        // insert the elements from
+        // the old array into the new array
+        // insert all elements till n
+        // then insert x at n+1
+        for (int i = 0; i < n; i++)
+        {
+            newArr[i] = movieList[i];
+        }
+
+
+        newArr[n] = newMovie;
+
+        return newArr;
+    }
     public static void main(String[] args)
     {
         app();
