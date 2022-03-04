@@ -116,6 +116,7 @@ public class MoviesApplication
             newArr[i] = movieList[i];
         }
         newArr[n] = newMovie;
+
         return newArr;
     }
     public static void main(String[] args)
