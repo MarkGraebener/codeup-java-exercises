@@ -40,7 +40,7 @@ public class Student
         {
             sum += grade;
         }
-        return (double) sum / grades.size();
+        return Math.round(sum / grades.size());
     };
 
 
