@@ -83,11 +83,7 @@ public static void runApp()
 //        printAllNames();
 //        printStudentByGHName("MarkGraebener");
         startApp();
-
-        
-
-
-
+//        System.out.println("Student.studentCount = " + Student.studentCount);
 
 
     }
