@@ -42,7 +42,10 @@ public class Student
         }
         return Math.round(sum / grades.size());
     };
-
+public int printStudentCount()
+{
+    return studentCount;
+}
 
     public static void main(String[] args)
     {
@@ -62,5 +65,6 @@ public class Student
         System.out.println("student1.getGradeAverage() = " + student1.getGradeAverage());
         System.out.println("student1.grades = " + student1.grades);
         System.out.println("Student.studentCount = " + Student.studentCount);
+
     }
 }
